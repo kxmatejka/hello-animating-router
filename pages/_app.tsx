@@ -1,15 +1,20 @@
 import React from 'react'
 import App from 'next/app'
+import {AnimatePresence} from 'framer-motion'
 
 export default class extends App {
   render () {
     const {
       Component,
-      pageProps
+      pageProps,
+      router
     } = this.props
+    console.log(router)
 
     return (
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
     )
   }
 }
