@@ -42,14 +42,12 @@ const ImageLink = ({id}) => {
   )
 }
 
-export const List = () => {
-  return (
-    <Container
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-    >
-      {Object.keys(data).map(key => <ImageLink id={key} key={key} />)}
-    </Container>
-  )
-}
+export const List = () => (
+  <Container
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0}}
+  >
+    {Object.keys(data).map(key => <ImageLink id={key} key={key}/>)}
+  </Container>
+)

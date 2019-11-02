@@ -9,7 +9,6 @@ export default class extends App {
       pageProps,
       router
     } = this.props
-    console.log(router)
 
     return (
       <AnimatePresence exitBeforeEnter>

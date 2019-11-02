@@ -1,12 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
 import {data} from '../data'
-
-const Container = styled(motion.div)`
-  width: 0;
-`
 
 export const Detail = ({id}) => {
   const {
@@ -15,7 +10,7 @@ export const Detail = ({id}) => {
   } = data[id]
 
   return (
-    <Container
+    <motion.div
       initial={{opacity: 0}}
       animate={{opacity: 1}}
       exit={{opacity: 0}}
@@ -34,7 +29,7 @@ export const Detail = ({id}) => {
         src={img}
         alt={title}
       />
-    </Container>
+    </motion.div>
   )
 }
 
