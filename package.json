@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/kxmatejka/next-template#readme",
   "dependencies": {
+    "framer-motion": "^1.6.15",
     "next": "^9.0.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
